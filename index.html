@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f5f5f5;
+    }
+    
+    #container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      cursor: none;
+    }
+    
+    .block {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background-color: #000;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: fade 0.5s ease-out;
+    }
+    
+    .block.fall {
+      animation: fall 1s linear forwards;
+    }
+    
+    @keyframes fade {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @keyframes fall {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var container = document.getElementById('container');
+
+      function createBlock(x, y, shouldFall) {
+        var block = document.createElement('div');
+        block.className = 'block';
+        block.style.left = x + 'px';
+        block.style.top = y + 'px';
+        
+        if (shouldFall) {
+            var forceX = (Math.random() * 2 - 1) * 10; // Força aleatória no eixo X (-10 a 10)
+            var forceY = (Math.random() * 2 - 1) * 10; // Força aleatória no eixo Y (-10 a 10)
+            var duration = 1000; // Duração da animação em milissegundos
+            var startTime = null;
+
+            function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = timestamp - startTime;
+
+            if (progress >= duration) {
+                block.style.transform = 'translate(100vw, 100vh)'; // Move o bloco para fora da tela
+                setTimeout(function() {
+                block.remove();
+                }, 1000);
+                return;
+            }
+
+            var displacementX = forceX * (progress / duration) * 100;
+            var displacementY = forceY * (progress / duration) * 100;
+
+            block.style.transform = 'translate(' + displacementX + 'px, ' + displacementY + 'px)';
+            requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        container.appendChild(block);
+        
+        setTimeout(function() {
+            block.remove();
+        }, 1000);
+        }
+      document.addEventListener('click', function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        for (var i = 0; i < 15; i++) {
+          var randomX = x + Math.random() * 100 - 50;
+          var randomY = y + Math.random() * 100 - 50;
+          createBlock(randomX, randomY, true);
+        }
+      });
+
+      document.addEventListener('mousemove', function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        createBlock(x, y, false);
+      });
+    });
+  </script>
+</body>
+</html>
