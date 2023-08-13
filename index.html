@@ -10,12 +10,13 @@
       height: 1000%;
       background-color: #000;
       z-index: 999;
-      animation: fade-out 5s forwards;
+      animation: fade-out 10s forwards;
+      pointer-events: none;
     }
 
     @keyframes fade-out {
       from {
-        opacity: 1;
+        opacity: 1.1;
       }
       to {
         opacity: 0;
@@ -26,7 +27,7 @@
       position: absolute;
       top: 0;
       left: 0;  
-      width: 930px;
+      width: 95%;
       background-color: #333;
       color: #fff;
       display: flex;
@@ -59,8 +60,8 @@
 
     .TextAboutCode {
       position: absolute;
-      left: 375px;
-      top: 500px;
+      left: 40%;
+      top: 75%;
       color: black;
       font-size: 22px;
       margin: 0;
@@ -71,6 +72,10 @@
       border-right: .15em solid black;
       margin-bottom: 20px;
       animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     @keyframes typing {
@@ -92,14 +97,6 @@
       }
     }
 
-    .black-block {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 200px;
-      height: 600px;
-      background-image: linear-gradient(to bottom, gray, black);
-    }
 
     @keyframes shine {
       0% {
@@ -118,11 +115,32 @@
       animation: typing 5s steps(40, end);
     }
 
+    .TextAboutMe {
+      animation: typing 5s steps(40, end);
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, p {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
     .homelabel-link {
       position: absolute;
-      top: 40px;
+      top: 10%;
       z-index: 999999;
-      left: 450px;
+      left: 40%;  
       color: #333333;
       padding: 10px 20px;
       text-align: center;
@@ -132,13 +150,17 @@
       background-color: transparent;
       border: none;
       outline: none;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     .aboutLabel-link {
       position: absolute;
-      top: 850px;
+      top: 103%;
       z-index: 999999;
-      left: 450px;
+      left: 40%;
       color: #333333;
       padding: 10px 20px;
       text-align: center;
@@ -148,13 +170,17 @@
       background-color: transparent;
       border: none;
       outline: none;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     .portfolioLabel-link {
       position: absolute;
-      top: 1550px;
+      top: 203%;
       z-index: 999999;
-      left: 450px;
+      left: 40%;
       color: #333333;
       padding: 10px 20px;
       text-align: center;
@@ -164,13 +190,17 @@
       background-color: transparent;
       border: none;
       outline: none;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     .contactLabel-link {
       position: absolute;
-      top: 2250px;
+      top: 303%;
       z-index: 999999;
-      left: 450px;
+      left: 40%;
       color: #333333;
       padding: 10px 20px;
       text-align: center;
@@ -180,22 +210,25 @@
       background-color: transparent;
       border: none;
       outline: none;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     .pfpicon { 
-      top: 900px;
-      left: 0px;
+      top: 110%;
+      left: 5%;
       display: inline-flex;
       position: absolute;
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
+      width: 15%;
+      height: 30%;
       animation: shine 5s linear infinite;
+
     }
 
-
     .robloxicon { 
-      top: 625px;
+      top: 93%;
       left: 450px;
       display: inline-flex;
       position: absolute;
@@ -206,7 +239,7 @@
     }
 
     .githubicon { 
-      top: 625px;
+      top: 93%;
       left: 500px;
       display: inline-flex;
       position: absolute;
@@ -217,7 +250,7 @@
     }
 
     .twiitericon { 
-      top: 625px;
+      top: 93%;
       left: 550px;
       display: inline-flex;
       position: absolute;
@@ -238,8 +271,11 @@
       font-size: 16px;
       position: absolute;
       font-size: 5;
-      top: 65px;
-      left: 50px;
+
+      top: 15%;
+      left: 10%;
+      width: 15%;
+
       color: #333333;
       padding: 10px;
       margin-bottom: 20px;
@@ -252,7 +288,7 @@
 
     .page1-block {
       position: absolute;
-      top: 670px;
+      top: 99%;
       left: 0px;
       width: 950px;
       height: 5px;
@@ -262,7 +298,7 @@
 
     .page2-block {
       position: absolute;
-      top: 1510px;
+      top: 199%;
       left: 0px;
       width: 950px;
       height: 5px;
@@ -272,7 +308,7 @@
 
     .page3-block {
       position: absolute;
-      top: 2200px;
+      top: 299%;
       left: 0px;
       width: 950px;
       height: 5px;
@@ -282,7 +318,7 @@
 
     .page4-block {
       position: absolute;
-      top: 2900px;
+      top: 399%;
       left: 0px;
       width: 950px;
       height: 5px;
@@ -305,19 +341,47 @@
     }
 
     .SkinImage {
-      position: absolute;
-      top: 250px;
-      left: -75px;
-      width: 50px;
-      height: 30px;
-      border: 1px solid #000;
+      position: absolute; 
+
+      top: 40%;
+      left: -5%;
+      width: 15%;
+      height: 100%;
+
+      border: 0px solid #000;
       z-index: 98;
+    }
+
+    .block-text {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      font-size: 16px;
+      position: absolute;
+      font-size: 5;
+
+      top: calc(40% - 180px);
+      left: calc(-5% + 200px);
+
+      color: #333333;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 99;
+      animation: shine 5s linear infinite;
+    }
+
+    .MessageContact {
+      position: absolute;
+      top: 400%;
+      left: 25%;
     }
 
     #Rocket {
         position: absolute;
-        top: 225px;
-        left: 235px;
+        top: calc(40% - 180px + 190px);
+        left: calc(-5% + 200px + 200px);
         width: 35px;
         z-index: 100;
     }
@@ -325,7 +389,7 @@
     #Program {
         position: absolute;
         top: 100px;
-        left: 400px;
+        left: 30%;
         width: 500px;
         z-index: 100;
     }
@@ -355,12 +419,6 @@
       cursor: none !important;
     }
 
-    #containercontact {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      cursor: none !important;
-    }
 
     .block {
       position: absolute;
@@ -376,6 +434,50 @@
 
     .block.fall {
       animation: fall 1s linear forwards;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -30%;
+        margin-left: -130%;
+        width: 10%;
+        height: 50%;
+    }
+
+    .TextContact {
+      position: relative;
+      top: -40%;
+      left: -20%;
+      font-size: 18px;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
+    }
+    
+    #TextContactUserName, #TextContactContent {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #SendMessage {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .TextAboutVideo {
+      position: absolute;
+      top: 215%;
+      left: 40%;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
     }
 
     .page1 {
@@ -437,19 +539,19 @@
       }
     }
     .no-select {
-      user-select: none; /* Impede a seleção de texto */
+      user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
     }
 
     body {
-        background-color: whitesmoke;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center; 
-        padding: 40px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0A1931, #1D3354); /* Gradiente de cores azul escuras */
+      color: #000000; /* Texto preto para contraste */
     }
+
 
     h1 {
         font-size: 36px;
@@ -474,46 +576,53 @@
     }
 
     .video-container {
-      display: flex;
-      justify-content: center;
+      position: absolute;
+      left: 15%;
+      top: 225%;
+      width: 750px;
+      height: 50%;
     }
-    
-    video {
-      width: 700px;
+
+    #video-player {
+      width: 100%;
+      height: 100%;
     }
     
     .RightArrow {
       position: absolute;
-      color: #000;
-      font-size: 40px;
-      top: 1850px;
-      left: 870px;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
+      font-size: 35px;
+      top: 250%;
+      left: 80%;
       z-index: 99999;
     }
 
     .LeftArrow {
       position: absolute;
       color: #000;
-      font-size: 40px;
-      top: 1850px;
-      left: 50px;
+      font-size: 35px;
+      font-weight: bold;
+      color: #F0F0F0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      transform: translate(-30%, -50%);
+      top: 250%;
+      left: 10%;
       z-index: 99999;
     }
-
-
   </style>
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 
   <style>
     .no-select {
-      user-select: none; /* Impede a seleção de texto */
+      user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
     }
   </style>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var elementos = document.getElementsByTagName('*');
@@ -574,15 +683,14 @@
 
   
   <div class="page2">
-    <span class="aboutLabel-link">About</span>
+    <span class="aboutLabel-link">About Me</span>
     <div class="page2-block"></div>
 
     <div class="pfpicon">
       <img src="Assets/pfp.png" alt="">
     </div>
 
-
-    <div class="container">
+    <div class="TextAboutMe">
       <h1>Luiz</h1>
       <p>I'm Luiz aka Hiasei, a developer from Roblox Studios!</p>
       <p>I've had 3 years of experience with Lua and I've been playing Roblox since 2016. I'm currently living in Brazil!</p>
@@ -613,16 +721,49 @@
     <span class="contactLabel-link">Contact</span>
     <div class="page4-block"></div>
 
-    <div class="containercontact">
-      <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Feel free to contact me in discord hiasei0 or in twitter Hiasei0</p>
-      <p>On top you can contact me with Email!</p>
+    <p class="MessageContact">Feel free to contact me in discord hiasei0 or in twitter Hiasei0 </br> On top you can contact me with Email!</br></br>This site was created by me.</p>
+    <p class="TextContact">I will appreciate any suggestions that can help enhance my portfolio, </br>as well as anyone wishing to get in touch using the 'Contact Me' system.</br> This system directs your messages to my contact directory,</br> so please make sure to introduce yourself when reaching out.</p>
+    <p class="TextAboutVideo"> ||| </p>
+    
+    <div class="contact-container">
+      <textarea id="TextContactUserName" rows="4" cols="50">Your Contact</textarea>
+      <textarea id="TextContactContent" rows="4" cols="50">Your Message</textarea>
+      <button id="SendMessage">Send Message</button>
     </div>
+
+    
+
   </div>
   <script>
+    function Webhook() {
+      var userName = document.getElementById('TextContactUserName').value;
+      var messageContent = document.getElementById('TextContactContent').value;
+
+      const webhook = "https://discordapp.com/api/webhooks/1140306484169818183/HMQauq834tNi3jWCAN5iuTPoRMU02SFoeqSNR9ZKCnvibYZZ97ADBfCc2aozbsOPDg9l";
+      const contents = `**UserName:** ${userName}\n**Message:** ${messageContent}`;
+      const request = new XMLHttpRequest();
+
+      request.open("POST", webhook);
+      request.setRequestHeader('Content-type', 'application/json'); // Correção aqui
+
+      const params = {
+        content: contents
+      }
+
+      request.send(JSON.stringify(params));
+
+      document.getElementById("TextContactContent").textContent = ""
+      document.getElementById("TextContactUserName").textContent = ""
+    }
+    document.getElementById('SendMessage').addEventListener('click', function() {
+      Webhook();
+    });
+
     var videoPlayer = document.getElementById("video-player");
     var videoList = [];
+    var textAboutVideoElement = document.querySelector(".TextAboutVideo");
+    
     var currentVideoIndex = 0;
-
 
     var prevArrow = document.getElementById("prev-arrow");
     prevArrow.addEventListener("click", playPreviousVideo);
@@ -636,6 +777,11 @@
         currentVideoIndex = 0;
       }
       videoPlayer.src = videoList[currentVideoIndex];
+
+      const filePath = videoList[currentVideoIndex];
+      const fileNameWithExtension = filePath.split('/').pop();
+      const fileNameWithoutExtension = fileNameWithExtension.replace('.mkv', '');
+      textAboutVideoElement.textContent = fileNameWithoutExtension;
     }
 
     function playPreviousVideo() {
@@ -644,6 +790,13 @@
         currentVideoIndex = videoList.length - 1;
       }
       videoPlayer.src = videoList[currentVideoIndex];
+      textAboutVideoElement.textContent = videoList[currentVideoIndex];
+
+      const filePath = videoList[currentVideoIndex];
+
+      const fileNameWithExtension = filePath.split('/').pop();
+      const fileNameWithoutExtension = fileNameWithExtension.replace('.mkv', '');
+      textAboutVideoElement.textContent = fileNameWithoutExtension;
     }
 
     const { TweenMax, Power2 } = window;
