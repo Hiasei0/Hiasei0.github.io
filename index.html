@@ -6,12 +6,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      width:  1000%;
-      height: 1000%;
+      width:  100%;
+      height: 100%;
       background-color: #000;
       z-index: 999;
       animation: fade-out 10s forwards;
       pointer-events: none;
+      cursor: none
     }
 
     @keyframes fade-out {
@@ -24,7 +25,7 @@
     }
 
     .top-bar {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;  
       width: 95%;
@@ -34,7 +35,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
-      z-index: 99;
+      z-index: 99999;
+      cursor: none;
     }
 
     .top-bar a {
@@ -42,6 +44,7 @@
       text-decoration: none;
       font-size: 30px;
       margin-left: 15px;
+      cursor: none
     }
 
 
@@ -56,10 +59,12 @@
       border-right: .15em solid white;
       margin-bottom: 20px;
       animation: typing 1s steps(40, end), blink-caret 0.5s step-end infinite;
+      cursor: none;
     }
 
     .TextAboutCode {
       position: absolute;
+      opacity: 0;
       left: 40%;
       top: 75%;
       color: black;
@@ -76,6 +81,7 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none
     }
 
     @keyframes typing {
@@ -116,10 +122,10 @@
     }
 
     .TextAboutMe {
-      animation: typing 5s steps(40, end);
+      animation: typing 2.5s steps(40, end);
       font-weight: bold;
-      color: #F0F0F0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      opacity: 0 ;
     }
 
     h1, p {
@@ -154,6 +160,7 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none
     }
 
     .aboutLabel-link {
@@ -174,6 +181,7 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none
     }
 
     .portfolioLabel-link {
@@ -194,6 +202,7 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none
     }
 
     .contactLabel-link {
@@ -214,6 +223,7 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none
     }
 
     .pfpicon { 
@@ -224,7 +234,8 @@
       width: 15%;
       height: 30%;
       animation: shine 5s linear infinite;
-
+      cursor: none;
+      opacity: 0 ;
     }
 
     .robloxicon { 
@@ -236,6 +247,8 @@
       height: 35px;
       border-radius: 50%;
       background-color: rgba(0, 0, 0, 0.1);
+      cursor: none;
+      opacity: 0;
     }
 
     .githubicon { 
@@ -247,6 +260,8 @@
       height: 35px;
       border-radius: 50%;
       background-color: rgba(0, 0, 0, 0.1);
+      cursor: none;
+      opacity: 0 ;
     }
 
     .twiitericon { 
@@ -258,11 +273,15 @@
       height: 35px;
       border-radius: 50%;
       background-color: rgba(0, 0, 0, 0.1);
+      cursor: none;
+      opacity: 0 ;
     }
 
     .button-icon {
       width: 35px;
       height: 35px;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .block-text {
@@ -284,6 +303,8 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 99;
       animation: shine 5s linear infinite;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .page1-block {
@@ -294,6 +315,8 @@
       height: 5px;
       background-color: #000;
       z-index: 9999;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .page2-block {
@@ -304,6 +327,8 @@
       height: 5px;
       background-color: #000;
       z-index: 9999;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .page3-block {
@@ -314,6 +339,8 @@
       height: 5px;
       background-color: #000;
       z-index: 9999;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .page4-block {
@@ -324,6 +351,8 @@
       height: 5px;
       background-color: #000;
       z-index: 9999;
+      cursor: none;
+      opacity: 0;
     }
 
     .block-text strong {
@@ -350,6 +379,8 @@
 
       border: 0px solid #000;
       z-index: 98;
+      cursor: none;
+      opacity: 0;
     }
 
     .block-text {
@@ -370,12 +401,16 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       z-index: 99;
       animation: shine 5s linear infinite;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .MessageContact {
       position: absolute;
       top: 400%;
       left: 25%;
+      cursor: none;
+      opacity: 0 ;
     }
 
     #Rocket {
@@ -384,6 +419,8 @@
         left: calc(-5% + 200px + 200px);
         width: 35px;
         z-index: 100;
+        cursor: none;
+        opacity: 0 ;
     }
 
     #Program {
@@ -392,6 +429,7 @@
         left: 30%;
         width: 500px;
         z-index: 100;
+        cursor: none;
     }
 
     @keyframes typing {
@@ -413,10 +451,11 @@
     }
 
     #container {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      cursor: none !important;
+      position: absolute;
+      width: 100%;
+      height: 325%;
+      cursor: none;
+      pointer-events: none;
     }
 
 
@@ -424,36 +463,42 @@
       position: absolute;
       width: 7px;
       height: 7px;
-      background-color: #000;
+      background-color: #fff;
       border-radius: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
       animation: fade 0.5s ease-out;
-      z-index: 9999;
+      z-index: 99999999999999999999999999999999;
+      cursor: none
     }
 
     .block.fall {
       animation: fall 1s linear forwards;
+      cursor: none
     }
     .contact-container {
+        position: relative ;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: -30%;
+        margin-top: -20%;
         margin-left: -130%;
         width: 10%;
         height: 50%;
+        cursor: none
     }
 
     .TextContact {
-      position: relative;
-      top: -40%;
+      position: relative ;
+      top: -30%;
       left: -20%;
       font-size: 18px;
       font-weight: bold;
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none;
+      opacity: 0 ;
     }
     
     #TextContactUserName, #TextContactContent {
@@ -467,7 +512,8 @@
         background-color: #007bff;
         color: #fff;
         border: none;
-        cursor: pointer;
+        cursor: none;
+        opacity: 1 ;
     }
 
     .TextAboutVideo {
@@ -478,7 +524,56 @@
       color: #F0F0F0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
       transform: translate(-30%, -50%);
+      cursor: none;
+      opacity: 0 ;
     }
+
+    ::-webkit-scrollbar{
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track{
+      background: #d1e5ff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(#642bff,#ff22e6);
+      border-radius: 10px;
+    }
+
+    .lua {
+      position: absolute;
+      top: 415%;
+      left: 15%;
+      cursor: none;
+      opacity: 0 ;
+    }
+
+    .html {
+      position: absolute;
+      top: 415%;
+      left: 25%;
+      cursor: none;
+      opacity: 0 ;
+    }
+
+    .cpp {
+      position: absolute;
+      top: 415%;
+      left: 35%;
+      cursor: none;
+      opacity: 0 ;
+    }
+
+    .python {
+      position: absolute;
+      top: 415%;
+      left: 45%;
+      cursor: none;
+      opacity: 0 ;
+    }
+
+
 
     .page1 {
       height: 100vh;
@@ -487,6 +582,7 @@
       justify-content: center;
       font-size: 24px;
       color: white;
+      cursor: none
     }
 
     .page2 {
@@ -496,6 +592,7 @@
       justify-content: center;
       font-size: 24px;
       color: white;
+      cursor: none
     }
 
     .page3 {
@@ -505,6 +602,7 @@
       justify-content: center;
       font-size: 24px;
       color: white;
+      cursor: none
     }
 
     .page4 {
@@ -514,6 +612,7 @@
       justify-content: center;
       font-size: 24px;
       color: white;
+      cursor: none
     }
 
     @keyframes fade {
@@ -553,39 +652,19 @@
     }
 
 
-    h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: black;
-    }
-
-    p {
-        font-size: 18px;
-        line-height: 1.5;
-        margin-bottom: 30px;
-        color: black;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
     .video-container {
       position: absolute;
       left: 15%;
       top: 225%;
       width: 750px;
       height: 50%;
+      cursor: none;
     }
 
     #video-player {
       width: 100%;
       height: 100%;
+      cursor: none;
     }
     
     .RightArrow {
@@ -598,6 +677,8 @@
       top: 250%;
       left: 80%;
       z-index: 99999;
+      cursor: none;
+      opacity: 0 ;
     }
 
     .LeftArrow {
@@ -611,32 +692,41 @@
       top: 250%;
       left: 10%;
       z-index: 99999;
+      cursor: none;
+      opacity: 0 ;
     }
-  </style>
-
-  <style>
+    
     .no-select {
       user-select: none;
       -moz-user-select: none;
       -webkit-user-select: none;
       -ms-user-select: none;
     }
-  </style>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elementos = document.getElementsByTagName('*');
-      for (var i = 0; i < elementos.length; i++) {
-        elementos[i].addEventListener('dblclick', function(event) {
-          event.preventDefault();
-        });
-      }
-    });
-  </script>
 
+    .animation {
+      opacity: 1; /* Move para a posição correta */
+      transition: opacity 2s;
+    }
+  </style>
 </head>
 <body>
+  
   <div class="black-screen"></div>
+
+  <div class="html">
+    <img src="Assets/html.png" alt="" width="75" height="75">
+  </div>
+  <div class="cpp">
+    <img src="Assets/cpp.png" alt="" width="75" height="75">
+  </div>
+  <div class="lua">
+    <img src="Assets/lua.png" alt="" width="75" height="75">
+  </div>
+  <div class="python">
+    <img src="Assets/python.png" alt="" width="75" height="75">
+  </div>
+
+
   <div class="page1">
     <div class="SkinImage">
       <img src="Assets/Skin.png" alt="">
@@ -692,10 +782,10 @@
 
     <div class="TextAboutMe">
       <h1>Luiz</h1>
-      <p>I'm Luiz aka Hiasei, a developer from Roblox Studios!</p>
-      <p>I've had 3 years of experience with Lua and I've been playing Roblox since 2016. I'm currently living in Brazil!</p>
-      <p>I am actively seeking a project where I can make a substantial contribution! Additionally, I am currently learning Lua along with English.</p>
-      <p>My work is efficiently organized using Trello, allowing seamless coordination within my GMT-3 time zone. If you'd like to gain a deeper understanding of my expertise, feel free to explore my portfolio below or reach out to me for further discussion!<p>
+      <p>Hi, I'm Luiz, also known as Hiasei on Roblox, with over 4 years of scripting experience, proudly from Brazil.</p>
+      <p>As Hiasei on Roblox, I've accumulated 4+ years of scripting experience at just 16 years old. Based in USA (GMT-5), my dedicated coding hours are from 4 AM to 10 AM, including weekends.</p>
+      <p>In recent times, I have devoted a significant portion of my time to refining my skills and learning more as a programmer, both in terms of optimizing your game for incredible performance and safeguarding it against exploiters.</p>
+      <p>I'm on the lookout for a collaborative project to contribute significantly to. Let's connect and explore how my skills can bring value to your team.</p>
     </div>
 
   </div>
@@ -706,7 +796,7 @@
 
     <div class="video-container">
       <video id="video-player" controls>
-        <source src="Assets/Program.mp4" type="video/mp4">
+        <source src="" type="video/mp4">
       </video>
     </div>
   
@@ -721,9 +811,9 @@
     <span class="contactLabel-link">Contact</span>
     <div class="page4-block"></div>
 
-    <p class="MessageContact">Feel free to contact me in discord hiasei0 or in twitter Hiasei0 </br> On top you can contact me with Email!</br></br>This site was created by me.</p>
+    <p class="MessageContact">Feel free to contact me in discord hiasei0 or in twitter Hiasei0 </br> On top you can contact me!</p>
     <p class="TextContact">I will appreciate any suggestions that can help enhance my portfolio, </br>as well as anyone wishing to get in touch using the 'Contact Me' system.</br> This system directs your messages to my contact directory,</br> so please make sure to introduce yourself when reaching out.</p>
-    <p class="TextAboutVideo">Showcase from sword</p>
+    <p class="TextAboutVideo"></p>
     
     <div class="contact-container">
       <textarea id="TextContactUserName" rows="4" cols="50">Your Contact</textarea>
@@ -735,7 +825,33 @@
 
   </div>
   <script>
-    function Webhook() {
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elementos = document.getElementsByTagName('*');
+      for (var i = 0; i < elementos.length; i++) {
+        elementos[i].addEventListener('dblclick', function(event) {
+          event.preventDefault();
+        });
+      }
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                entry.target.classList.remove('animation');
+            } else {
+                entry.target.classList.add('animation');
+            }
+        });
+    });
+
+    const todosElementos = document.querySelectorAll('*');
+    todosElementos.forEach(elemento => {
+        observer.observe(elemento);
+    });
+
+
+    function Webhook() {  
       var userName = document.getElementById('TextContactUserName').value;
       var messageContent = document.getElementById('TextContactContent').value;
 
@@ -751,12 +867,14 @@
       }
 
       request.send(JSON.stringify(params));
-
-      document.getElementById("TextContactContent").textContent = ""
-      document.getElementById("TextContactUserName").textContent = ""
     }
+
+    const content = document.getElementById("TextContactContent");
+    const name =  document.getElementById("TextContactUserName");
     document.getElementById('SendMessage').addEventListener('click', function() {
       Webhook();
+      content.textContent = ""
+      name.textContent  = ""
     });
 
     var videoPlayer = document.getElementById("video-player");
@@ -770,7 +888,14 @@
 
     var nextArrow = document.getElementById("next-arrow");
     nextArrow.addEventListener("click", playNextVideo);
-
+    
+    if (videoList[0]) {
+      videoPlayer.src = videoList[0];
+      const filePath = videoList[0];
+      const fileNameWithExtension = filePath.split('/').pop();
+      const fileNameWithoutExtension = fileNameWithExtension.replace('.mp4', '');
+      textAboutVideoElement.textContent = fileNameWithoutExtension;
+    }
     function playNextVideo() {
       currentVideoIndex++;
       if (currentVideoIndex >= videoList.length) {
@@ -780,7 +905,7 @@
 
       const filePath = videoList[currentVideoIndex];
       const fileNameWithExtension = filePath.split('/').pop();
-      const fileNameWithoutExtension = fileNameWithExtension.replace('.mkv', '');
+      const fileNameWithoutExtension = fileNameWithExtension.replace('.mp4', '');
       textAboutVideoElement.textContent = fileNameWithoutExtension;
     }
 
