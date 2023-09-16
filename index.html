@@ -14,7 +14,12 @@
       pointer-events: none;
       cursor: none
     }
-
+    body {
+      user-select: none;
+    }
+    html {
+      overflow-x: hidden;
+    }
     @keyframes fade-out {
       from {
         opacity: 1.1;
@@ -51,7 +56,7 @@
     .title {
       color: #fff;
       font-size: 24px;
-      margin: 0;
+      margin: 1;
       font-family: Arial, sans-serif;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       overflow: hidden;
@@ -122,6 +127,7 @@
     }
 
     .TextAboutMe {
+      top: 10px;
       animation: typing 2.5s steps(40, end);
       font-weight: bold;
       color: #fff;
@@ -231,7 +237,7 @@
       left: 5%;
       display: inline-flex;
       position: absolute;
-      width: 15%;
+      width: 50%;
       height: 30%;
       animation: shine 5s linear infinite;
       cursor: none;
@@ -373,7 +379,7 @@
       position: absolute; 
 
       top: 40%;
-      left: -5%;
+      left: -3%;
       width: 15%;
       height: 100%;
 
@@ -391,7 +397,7 @@
       font-size: 5;
 
       top: calc(40% - 180px);
-      left: calc(-5% + 200px);
+      left: calc(-5% + 240px);
 
       color: #333333;
       padding: 10px;
@@ -415,22 +421,22 @@
 
     #Rocket {
         position: absolute;
-        top: calc(40% - 180px + 190px);
-        left: calc(-5% + 200px + 200px);
+        top: calc(40% - 180px + 160px);
+        left: calc(-5% + 240px + 215px);
         width: 35px;
         z-index: 100;
         cursor: none;
-        opacity: 0 ;
     }
 
     #Program {
-        position: absolute;
-        top: 100px;
-        left: 30%;
-        width: 500px;
-        z-index: 100;
-        cursor: none;
-    }
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      width: 80%; /* Aumenta a largura no eixo X */
+      height: 50%; /* Aumenta a altura no eixo Y */
+      z-index: 100;
+      cursor: none;
+  }
 
     @keyframes typing {
       from {
@@ -656,7 +662,7 @@
       position: absolute;
       left: 15%;
       top: 225%;
-      width: 750px;
+      width: 60%;
       height: 50%;
       cursor: none;
     }
@@ -780,7 +786,7 @@
       <img src="Assets/pfp.png" alt="">
     </div>
 
-    <div class="TextAboutMe">
+    <div class="TextAboutMe" style="margin-top: 150px; margin-left: 10px; padding: 10px;">
       <h1>Luiz</h1>
       <p>Hi, I'm Luiz, also known as Hiasei on Roblox, with over 4 years of scripting experience, proudly from Brazil.</p>
       <p>As Hiasei on Roblox, I've accumulated 4+ years of scripting experience at just 16 years old. Based in USA (GMT-5), my dedicated coding hours are from 4 AM to 10 AM, including weekends.</p>
@@ -816,10 +822,13 @@
     <p class="TextAboutVideo"></p>
     
     <div class="contact-container">
-      <textarea id="TextContactUserName" rows="4" cols="50">Your Contact</textarea>
-      <textarea id="TextContactContent" rows="4" cols="50">Your Message</textarea>
+      <textarea id="TextContactUserName" rows="4" cols="50" placeholder="Your Contact"></textarea>
+      <textarea id="TextContactContent" rows="4" cols="50" placeholder="Your Message"></textarea>
       <button id="SendMessage">Send Message</button>
     </div>
+    
+
+    
 
     
 
@@ -873,8 +882,8 @@
     const name =  document.getElementById("TextContactUserName");
     document.getElementById('SendMessage').addEventListener('click', function() {
       Webhook();
-      content.textContent = ""
-      name.textContent  = ""
+      content.value = ""
+      name.value  = ""
     });
 
     var videoPlayer = document.getElementById("video-player");
@@ -993,8 +1002,8 @@
     
     document.addEventListener('DOMContentLoaded', function() {
       const contactLink = document.getElementById('contact-link')
-      const portfolioLink = document.getElementById('portfolio-link');
       const aboutLink = document.getElementById('about-link')
+      const portfolioLink = document.getElementById('portfolio-link');
       const HomeLink = document.getElementById('home-link')
       
       portfolioLink.addEventListener('click', function(event) {
